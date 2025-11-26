@@ -4,6 +4,7 @@
 ![Java](https://img.shields.io/badge/Language-Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Backend-Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
 ![Architecture](https://img.shields.io/badge/Architecture-MVC-blue?style=for-the-badge)
+![Material Design](https://img.shields.io/badge/Design-Material_3-757575?style=for-the-badge&logo=materialdesign&logoColor=white)
 
 > **Your Gateway to Knowledge.** > Aplikasi manajemen sumber belajar mandiri berbasis Android yang menghubungkan mahasiswa dengan materi kuliah secara terstruktur, real-time, dan terpersonalisasi.
 
@@ -23,36 +24,46 @@ Aplikasi ini menggunakan sistem **Single Entry Point Authentication**, di mana A
 * **Secure Registration:** Validasi input ketat dan enkripsi standar Firebase Auth.
 
 #### 👨‍🎓 User (Mahasiswa) Features
-* **Resource Browsing:** Jelajahi materi berdasarkan Program Studi (*Prodi*) dan Mata Kuliah.
-* **Smart Search:** Pencarian materi secara real-time dan filtering yang dinamis.
+* **Resource Browsing:** Jelajahi materi berdasarkan Program Studi (*Prodi*) dan Mata Kuliah menggunakan *Chip Filters*.
+* **Smart Search:** Pencarian materi secara real-time (local filtering) berdasarkan judul atau mata kuliah.
 * **Last Accessed History:** Fitur "Lanjutkan Belajar" yang otomatis menyimpan dan menampilkan materi terakhir yang dibuka oleh user.
-* **Integrated WebView:** Membuka materi berbasis web (artikel/video) langsung di dalam aplikasi tanpa keluar ke browser eksternal.
+* **Integrated WebView:** Membuka materi berbasis web (artikel/video) langsung di dalam aplikasi dengan dukungan **DOM Storage** untuk website modern.
 
 #### 👨‍💻 Admin Features
 * **Resource Management (CRUD):** Tambah, Edit, dan Hapus materi pembelajaran dengan mudah.
-* **Real-time Updates:** Perubahan data materi langsung terlihat oleh user tanpa perlu refresh manual.
-* **Metadata Management:** Mengelola relasi antara Program Studi dan Mata Kuliah.
+* **Real-time Updates:** Perubahan data materi langsung terlihat oleh user tanpa perlu refresh manual (Firestore Realtime Updates).
+* **Metadata Management:** Dropdown dinamis untuk relasi antara Program Studi dan Mata Kuliah.
 
 ---
 
 ## 🛠️ Teknologi & Arsitektur
 
-Project ini dibangun menggunakan pola desain **MVC (Model-View-Controller)** yang ketat untuk memastikan kode yang bersih, terorganisir, dan mudah dikembangkan.
+Project ini dibangun dengan standar industri modern menggunakan pola desain **MVC (Model-View-Controller)** untuk memastikan skalabilitas dan kemudahan maintenance.
 
-### 1. Tech Stack
-* **Bahasa:** Java (Native Android)
-* **Database:** Cloud Firestore (NoSQL Realtime Database)
-* **Auth:** Firebase Authentication
-* **UI Components:** Material Design 3, RecyclerView, CardView
+### 1. Core & Build System
+* **Language:** Java (Native Android)
+* **Build Tool:** Gradle (Kotlin DSL / `.kts`)
+* **Minimum SDK:** Android 24 (Nougat)
+* **Target SDK:** Android 31 (Android 12)
 
-### 2. Struktur Data (Firestore)
-Aplikasi ini menggunakan koleksi NoSQL yang saling berelasi:
-* `users`: Menyimpan profil pengguna, role (`admin`/`user`), dan history `lastAccessedResource`.
-* `resources`: Menyimpan metadata materi (Judul, Link, Tipe, ID Prodi, ID Matkul).
-* `prodi`: Data Program Studi.
-* `mata_kuliah`: Data Mata Kuliah yang terhubung ke Prodi.
+### 2. Backend & Cloud Services (Firebase)
+* **Authentication:** Manajemen sesi pengguna (Login/Register/Logout).
+* **Cloud Firestore:** Database NoSQL untuk penyimpanan data users, resources, prodi, dan mata kuliah secara real-time.
+* **Google Services Plugin:** Integrasi core layanan Google.
 
-### 3. Implementasi MVC
+### 3. Android Jetpack & Libraries
+* **ViewBinding:** Pengganti `findViewById` untuk interaksi UI yang lebih aman (Null Safety).
+* **RecyclerView:** Menampilkan list data yang besar secara efisien.
+* **Fragment Container:** Manajemen navigasi halaman (Home, Account, dll).
+* **CoordinatorLayout & NestedScrollView:** Handling scrolling yang kompleks pada halaman detail.
+* **Android WebKit:** Custom WebView Client untuk merender halaman web eksternal di dalam aplikasi.
+
+### 4. User Interface (UI)
+* **Material Design 3 (MDC):** Implementasi komponen desain modern Google.
+  * *Components:* MaterialCardView, TextInputLayout, MaterialButton, ChipGroup, BottomNavigationView.
+* **Custom Drawables:** Aset vektor XML kustom untuk ikonografi dan background.
+
+### 5. Arsitektur MVC
 * **Model:** Menangani logika bisnis dan komunikasi database (contoh: `AuthModel`, `HomeModel`, `AdminManageResourceModel`). Menggunakan **Interface Callbacks** untuk mengirim data kembali ke Controller secara asinkron.
 * **View:** XML Layouts dan Activity/Fragment yang menampilkan data.
 * **Controller:** Activity bertindak sebagai penghubung yang memanggil fungsi di Model dan memperbarui View.
@@ -73,7 +84,7 @@ Ikuti langkah ini untuk menjalankan project di Android Studio:
 
 1.  **Clone Repository**
     ```bash
-    git clone https://github.com/dinarfa/studygate_SI-C.git
+    git clone [https://github.com/dinarfa/studygate_SI-C.git](https://github.com/dinarfa/studygate_SI-C.git)
     ```
 2.  **Buka di Android Studio**
     * File > Open > Pilih folder project.
