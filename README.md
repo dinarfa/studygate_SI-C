@@ -63,11 +63,7 @@ Aplikasi ini menggunakan koleksi NoSQL yang saling berelasi:
 
 | Login Screen | User Dashboard | Resource Browse | Admin Panel |
 |:---:|:---:|:---:|:---:|
-| <img width="451" height="938" alt="image" src="https://github.com/user-attachments/assets/b80c27e7-6238-4b39-a0fa-22d23b61786d" />
- | <img width="425" height="931" alt="image" src="https://github.com/user-attachments/assets/edc42c9a-2213-4032-b230-fab3125fafc1" />
- | <img width="421" height="922" alt="image" src="https://github.com/user-attachments/assets/a40ba2e4-05dd-430e-9ee2-6ad9cc5b176c" />
- | <img width="417" height="925" alt="image" src="https://github.com/user-attachments/assets/b461a0fb-2727-4f25-acba-44a8fd9bd87c" />
- |
+| <img src="https://github.com/user-attachments/assets/b80c27e7-6238-4b39-a0fa-22d23b61786d" width="200" /> | <img src="https://github.com/user-attachments/assets/edc42c9a-2213-4032-b230-fab3125fafc1" width="200" /> | <img src="https://github.com/user-attachments/assets/a40ba2e4-05dd-430e-9ee2-6ad9cc5b176c" width="200" /> | <img src="https://github.com/user-attachments/assets/b461a0fb-2727-4f25-acba-44a8fd9bd87c" width="200" /> |
 
 ---
 
@@ -77,7 +73,7 @@ Ikuti langkah ini untuk menjalankan project di Android Studio:
 
 1.  **Clone Repository**
     ```bash
-    git clone [https://github.com/username-anda/study-gate.git](https://github.com/username-anda/study-gate.git)
+    git clone https://github.com/dinarfa/studygate_SI-C.git
     ```
 2.  **Buka di Android Studio**
     * File > Open > Pilih folder project.
