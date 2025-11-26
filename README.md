@@ -63,7 +63,11 @@ Aplikasi ini menggunakan koleksi NoSQL yang saling berelasi:
 
 | Login Screen | User Dashboard | Resource Browse | Admin Panel |
 |:---:|:---:|:---:|:---:|
-| *(Tempel Screenshot Login)* | *(Tempel Screenshot Home)* | *(Tempel Screenshot Browse)* | *(Tempel Screenshot CRUD)* |
+| <img width="451" height="938" alt="image" src="https://github.com/user-attachments/assets/b80c27e7-6238-4b39-a0fa-22d23b61786d" />
+ | <img width="425" height="931" alt="image" src="https://github.com/user-attachments/assets/edc42c9a-2213-4032-b230-fab3125fafc1" />
+ | <img width="421" height="922" alt="image" src="https://github.com/user-attachments/assets/a40ba2e4-05dd-430e-9ee2-6ad9cc5b176c" />
+ | <img width="417" height="925" alt="image" src="https://github.com/user-attachments/assets/b461a0fb-2727-4f25-acba-44a8fd9bd87c" />
+ |
 
 ---
 
