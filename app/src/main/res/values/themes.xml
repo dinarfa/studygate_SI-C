@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme for light mode. -->
+    <style name="Base.Theme.StudyGate.Light" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Light Mode Color Palette -->
+        <!-- Primary (Teal) -->
+        <item name="colorPrimary">@color/md_theme_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/md_theme_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_onPrimaryContainer</item>
+
+        <!-- Surface Colors (Light Grays) -->
+        <item name="android:colorBackground">@color/md_theme_surfaceContainer</item>
+        <item name="colorSurface">@color/md_theme_surface</item>
+        <item name="colorOnSurface">@color/md_theme_onSurface</item>
+        <item name="colorSurfaceVariant">@color/md_theme_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/md_theme_onSurfaceVariant</item>
+        <item name="colorSurfaceContainer">@color/md_theme_surfaceContainer</item>
+
+        <!-- Error Colors -->
+        <item name="colorError">@color/md_theme_error</item>
+        <item name="colorOnError">@color/md_theme_onError</item>
+
+        <!-- Status bar color -->
+        <item name="android:statusBarColor">?attr/colorSurfaceContainer</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!-- Tema Utama Light Mode -->
+    <style name="Theme.StudyGate" parent="Base.Theme.StudyGate.Light" />
+
+    <!-- Tema NoActionBar Light Mode -->
+    <style name="Theme.StudyGate.NoActionBar" parent="Base.Theme.StudyGate.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>
+

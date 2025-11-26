@@ -1,0 +1,46 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme for dark mode. -->
+    <style name="Base.Theme.StudyGate.Dark" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Dark Mode Color Palette -->
+        <!-- Primary (Teal) -->
+        <item name="colorPrimary">#4DB6AC</item> <!-- Teal 300 -->
+        <item name="colorOnPrimary">#003732</item> <!-- Dark Teal -->
+        <item name="colorPrimaryContainer">#005047</item> <!-- Dark Teal Container -->
+        <item name="colorOnPrimaryContainer">#A0F0E2</item> <!-- Teal 200 (light theme) -->
+
+        <!-- Surface Colors (Dark Grays) -->
+        <!-- Atribut tema ini MERUJUK ke warna yang didefinisikan DI LUAR style -->
+        <item name="android:colorBackground">@color/md_theme_dark_surfaceContainerLowest</item>
+        <item name="colorSurface">@color/md_theme_dark_surface</item>
+        <item name="colorOnSurface">@color/md_theme_dark_onSurface</item>
+        <item name="colorSurfaceVariant">@color/md_theme_dark_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/md_theme_dark_onSurfaceVariant</item>
+        <item name="colorSurfaceContainer">@color/md_theme_dark_surfaceContainer</item>
+
+        <!-- Error Colors -->
+        <item name="colorError">#F2B8B5</item> <!-- Material 3 Dark Error -->
+        <item name="colorOnError">#601410</item> <!-- Material 3 Dark OnError -->
+
+        <!-- Status bar color -->
+        <item name="android:statusBarColor">?attr/colorSurfaceContainer</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- Tema Utama Dark Mode -->
+    <style name="Theme.StudyGate" parent="Base.Theme.StudyGate.Dark" />
+
+    <!-- Tema NoActionBar Dark Mode -->
+    <style name="Theme.StudyGate.NoActionBar" parent="Base.Theme.StudyGate.Dark">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Definisikan warna-warna dark mode di sini (DI LUAR TAG STYLE) -->
+    <color name="md_theme_dark_surfaceContainerLowest">#121212</color>
+    <color name="md_theme_dark_surface">#1F1F1F</color>
+    <color name="md_theme_dark_onSurface">#EAEAEA</color>
+    <color name="md_theme_dark_surfaceVariant">#424242</color>
+    <color name="md_theme_dark_onSurfaceVariant">#BDBDBD</color>
+    <color name="md_theme_dark_surfaceContainer">#2C2C2C</color>
+</resources>
+

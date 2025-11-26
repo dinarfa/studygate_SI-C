@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".view.HomeFragment"> <!-- Sesuaikan context -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp"> <TextView
+            android:id="@+id/tv_welcome_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+            tools:text="Selamat Datang, Nama User!" />
+
+        </LinearLayout>
+
+        <!-- Bagian "Lanjutkan Belajar" (Placeholder) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_continue_learning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="?attr/colorPrimary"
+            app:cardCornerRadius="16dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+            <!-- Isi LinearLayout sama seperti di activity_home.xml lama -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lanjutkan Belajar"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                    android:textColor="?attr/colorOnPrimary" />
+                <TextView
+                    android:id="@+id/tv_continue_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textStyle="bold"
+                    tools:text="Dasar-Dasar Kotlin" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Judul "Resource Baru" -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Resource Baru Ditambahkan"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+            android:textStyle="bold" />
+
+        <!-- RecyclerView untuk Resource Baru -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_recent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:nestedScrollingEnabled="false"
+            tools:listitem="@layout/item_resource_card"
+            tools:itemCount="3" />
+
+        <!-- Progress Bar Loading -->
+        <ProgressBar
+            android:id="@+id/progress_bar_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <!-- Tombol "Lihat Semua" -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_browse_all"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Lihat Semua Materi"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

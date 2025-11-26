@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="ic_media_play" />
+    <drawable name="ic_menu_gallery" />
+    <drawable name="ic_menu_mapmode" />
+    <drawable name="ic_menu_help" />
+</resources>

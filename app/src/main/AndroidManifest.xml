@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Izin internet (wajib untuk Firestore) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- HANYA ADA SATU TAG <application> -->
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.StudyGate.NoActionBar"
+        tools:targetApi="31">
+
+
+        <!--
+        Activity Login (MainActivity)
+        Ini adalah activity yang pertama kali dibuka (LAUNCHER)
+        -->
+        <activity
+            android:name="com.f52123078.aplikasibelajarmandiri.viewModel.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Activity Registrasi -->
+        <activity
+            android:name="com.f52123078.aplikasibelajarmandiri.viewModel.RegisterActivity"
+            android:exported="false" />
+
+        <!-- Activity Home (Dashboard User) -->
+        <activity
+            android:name="com.f52123078.aplikasibelajarmandiri.viewModel.HomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.StudyGate.NoActionBar" />
+        <!-- Menggunakan tema NoActionBar seperti yang Anda tentukan -->
+
+        <!-- Nanti kita tambahkan AdminDashboardActivity di sini -->
+        <activity android:name="com.f52123078.aplikasibelajarmandiri.viewModel.AdminDashboardActivity"
+            android:exported="false"/>
+
+        <activity android:name="com.f52123078.aplikasibelajarmandiri.viewModel.AdminManageResourceActivity"
+        android:exported="false"/>
+        <activity android:name="com.f52123078.aplikasibelajarmandiri.viewModel.ResourceBrowseActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".viewModel.WebViewActivity"
+            android:parentActivityName=".viewModel.HomeActivity" />
+
+    </application>
+
+    <!--
+    TAG <application> KEDUA YANG ERROR SUDAH DIHAPUS.
+    Semua activity harus berada di dalam satu tag <application> di atas.
+    -->
+
+</manifest>
+

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".view.AccountFragment"> <!-- Sesuaikan context -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Informasi Akun"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Menampilkan Nama -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_account_name"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama Lengkap"
+        app:startIconDrawable="@drawable/person">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_account_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:textColor="?attr/colorOnSurface"
+            tools:text="Nama Pengguna Default"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Menampilkan Email -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_account_email"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Email"
+        app:startIconDrawable="@drawable/email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_account_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:textColor="?attr/colorOnSurface"
+            tools:text="email@example.com"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Spacer -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Tombol Logout -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_logout_account"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="14dp"
+        android:text="Logout"
+        app:icon="@drawable/logout"
+        app:iconGravity="textStart"
+        android:textColor="?attr/colorError"
+        app:strokeColor="?attr/colorError"
+        app:iconTint="?attr/colorError"
+        app:cornerRadius="28dp"
+        android:layout_marginBottom="16dp"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</LinearLayout>

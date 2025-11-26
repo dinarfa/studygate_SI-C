@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "629725998565",
+    "project_id": "studygate-2658b",
+    "storage_bucket": "studygate-2658b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629725998565:android:1a989f52087145836c930c",
+        "android_client_info": {
+          "package_name": "com.f52123078.aplikasibelajarmandiri"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbw0z12gSeIxabeE7xvuhSxZOsaAEoyt8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
